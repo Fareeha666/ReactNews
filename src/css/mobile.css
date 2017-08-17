@@ -87,3 +87,7 @@ html {
 .card {
 	margin: 0 5px 6px;
 }
+
+.ant-back-top {
+	right: 30px !important;
+}

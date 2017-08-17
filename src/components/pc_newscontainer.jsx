@@ -15,12 +15,21 @@ export default class PCNewsContainer extends React.Component{
 			slidesToScroll: 1,
 			autoplay: true
 		}
+
+		const carouselStyle = {
+			boxSizing: 'border-bbox',
+			height: '210px',
+			padding: '5px',
+			paddingLeft: 0,
+			overflow: 'hidden'
+		}
+
 		return (
 			<div>
 				<Row>
 					<Col span={2}></Col>
 					<Col span={6}>
-						<div className="carousel" style={{padding: '10px', paddingLeft: '0'}}>
+						<div  style={carouselStyle}>
 							<Carousel {...settings}>
 								<div><img className="carousel-img" src="https://08.imgmini.eastday.com/mobile/20161028/20161028005246_30294b4895331146d61ee2b3e3244cdc_1.jpg"/></div>
 								<div><img className="carousel-img" src="https://01.imgmini.eastday.com/mobile/20161028/20161028164015_abc1bd1a8a90d8e8f84438719d098c1e_1.jpeg"/></div>
@@ -34,7 +43,6 @@ export default class PCNewsContainer extends React.Component{
 							<TabPane tab="今日头条" key="1">
 								<PCNewsBlock count={6} type="top" width="100%" />
 							</TabPane>
-
 						</Tabs>
 					</Col>
 					<Col span={2}></Col>
